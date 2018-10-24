@@ -88,24 +88,21 @@ duration = time() - t0
 print("get cleaned testing datas list in %fs " % duration )
 
 #%%
-import math 
 
-def get_features( datas):
-    
-    features = []
-    for i in range(len(datas)):
-        for words in datas[i].split():
-            if words not in features:
-                features.append(words)
-                
-    return np.array(features)
-
-t0 = time()
-features = get_features(train_datas) 
+f = []
+for i in range(len(train_datas)):
+    for words in train_datas[i].split():
+        f.append(words)
+        
+t0 = time()      
+features = np.array(list(set(f)))
 duration = time() - t0
-print('get %d features of datas in %fs' % (len(features),duration))
+
+print('get features  in %fs' %  duration)
 
 #%%
+import math 
+
 def tfidf_vector(datas):
     
     row_count = len(datas)
