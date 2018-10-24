@@ -1,2 +1,2 @@
 # NLP
-data: 20 news group
+data: 20 news groups
