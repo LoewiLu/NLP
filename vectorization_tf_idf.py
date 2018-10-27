@@ -88,24 +88,21 @@ duration = time() - t0
 print("get cleaned testing datas list in %fs " % duration )
 
 #%%
-import math 
 
-def get_features( datas):
-    
-    features = []
-    for i in range(len(datas)):
-        for words in datas[i].split():
-            if words not in features:
-                features.append(words)
-                
-    return np.array(features)
-
-t0 = time()
-features = get_features(train_datas) 
+f = []
+for i in range(len(train_datas)):
+    for words in train_datas[i].split():
+        f.append(words)
+        
+t0 = time()      
+features = np.array(list(set(f)))
 duration = time() - t0
-print('get %d features of datas in %fs' % (len(features),duration))
+
+print('get features  in %fs' %  duration)
 
 #%%
+import math 
+
 def tfidf_vector(datas):
     
     row_count = len(datas)
@@ -135,20 +132,34 @@ def tfidf_vector(datas):
     matrix0 = math.log(row_count/(ma+1)) #idf
 
     return matrix * matrix0            
+
+
+def norm_l2(m):
+    
+    row, col = m.shape
+    
+    x = []
+    for i in range(row):    
+        length_m = np.sqrt((np.sum(m[i]**2)))
+        x.append(length_m)
+        
+    l = np.array(x).reshape(-1, 1)
+
+    return m/l
     
 
 if __name__ == "__main__":
     
    
     t0 = time() 
-    X_train = tfidf_vector(train_datas)   
+    X_train = norm_l2( tfidf_vector(train_datas) )
     duration = time() - t0
     print("done in %fs" % duration )
     print("%d documents, %d features" % X_train.shape)
 
     
     t0 = time() 
-    X_test = tfidf_vector(test_datas)   
+    X_test = norm_l2( tfidf_vector(test_datas) )
     duration = time() - t0
     print("done in %fs " % duration )
     print("%d documents, %d features" % X_test.shape)
