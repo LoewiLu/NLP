@@ -1,8 +1,6 @@
 ## NLP入门
 
-**wordcloud:** 
 
-visualization of word frequency in a given text as a weighted list 
 
 **classification:** 
 
@@ -18,3 +16,8 @@ text vectorization  | (multiple)|Tokenizer
 cross validation| (two) |--
 models|(multiple)|Sequential
 
+**wordcloud:** 
+
+visualization of word frequency in a given text as a weighted list 
+
+![result](https://github.com/LoewiLu/NLP/blob/master/wordcloud/result.png)
