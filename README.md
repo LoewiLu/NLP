@@ -7,6 +7,7 @@ visualization of word frequency in a given text as a weighted list
 **classification:** 
 
  `20 newsgroup database`
+ `glove`
   
 - features extraction (self-written)
 - tf-idf (self-written)
@@ -16,3 +17,4 @@ visualization of word frequency in a given text as a weighted list
 text vectorization  | (multiple)|Tokenizer
 cross validation| (two) |--
 models|(multiple)|Sequential
+
