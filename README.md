@@ -81,7 +81,7 @@ print('Shape of the embedding matrix:',embedding_matrix.shape)
 
 * [GloVe](https://nlp.stanford.edu/projects/glove/)  
 Download the files, and we use the `glove.6B.100d.txt`.  
-Pretty the [same procedure](https://github.com/LoewiLu/NLP/blob/master/LSTM/LSTM_revised.ipynb).
+Pretty the [same procedure](https://github.com/LoewiLu/NLP/blob/master/LSTM/LSTM_GloVe.ipynb).
 
 #### <a name="BOW"> -- Bag of Words (from Sklearn):</a>
 
