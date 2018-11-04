@@ -1,8 +1,8 @@
-#NLP_Python (小白进阶篇)
+# NLP_Python (小白进阶篇)
 
-##CLASSIFICATION 分类
+## CLASSIFICATION 分类
 
-###【买菜】Dataset download:
+### 【买菜】Dataset download:
 
 官网：[20 Newsgroups data set](http://qwone.com/~jason/20Newsgroups/)
 
@@ -18,7 +18,7 @@ There are three versions of the data set.
 And we are using the second one: [20news-bydate.tar.gz](http://qwone.com/~jason/20Newsgroups/20news-bydate.tar.gz)`(training(60%) & test(40%) = 18846 documents)`
 
 
-###【磨刀】Prerequisite: 
+### 【磨刀】Prerequisite: 
 
 * 平台:    
   [Anaconda](https://www.continuum.io/downloads)
@@ -28,7 +28,7 @@ And we are using the second one: [20news-bydate.tar.gz](http://qwone.com/~jason/
   [keras](https://keras.io/#installation)  
  
 
-###【备菜】Preparing the data：
+### 【备菜】Preparing the data：
  
 I wrote a module [__get](https://github.com/LoewiLu/NLP/blob/master/LSTM/feature_extraction.py) the data I need:
 
@@ -56,7 +56,7 @@ data_test = fetch_20newsgroups(subset='test')
 ~~~
 
 
-###【切菜】Extracting features:
+### 【切菜】Extracting features:
 
 Convert the text into numerical feature vectors.
 
@@ -98,7 +98,7 @@ X = vectorizer.fit_transform( dataset.data )
 ~~~
 
 
-###【炒菜】Building Models:
+### 【炒菜】Building Models:
 
 #### <a name="Prepare-X-y "> -- Prepare X, y: </a>
  
@@ -193,7 +193,7 @@ clf.best_score_
 clf.best_params_
 ~~~
 
-###【盛盘】Evaluation:
+### 【盛盘】Evaluation:
 
 * Keras: 
 
@@ -211,7 +211,7 @@ score = metrics.accuracy_score(y_test, pred)
 ------------------  
 ------------------
 
-##WORD CLOUD 词云图
+## WORD CLOUD 词云图
 
 visualization of word frequency in a given text as a weighted list 
 
