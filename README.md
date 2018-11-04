@@ -155,7 +155,7 @@ from sklearn.svm import SVC
 
 #### <a name="CV"> -- Training:</a>
 
-Just fit(X, y)
+Just `fit(X, y)`
 
 #### <a name="CV"> -- Cross Validation:</a>
 
