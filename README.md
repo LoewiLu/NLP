@@ -1,6 +1,9 @@
 #NLP_Python (小白进阶篇)
+
 ##CLASSIFICATION 分类
+
 ###【买菜】Dataset download:
+
 官网：[20 Newsgroups data set](http://qwone.com/~jason/20Newsgroups/)
 
 共20类别(Labels)，当然，每个类别下还有好多documents(.txt)：
@@ -16,13 +19,15 @@ And we are using the second one: [20news-bydate.tar.gz](http://qwone.com/~jason/
 
 
 ###【磨刀】Prerequisite: 
+
 * 平台:    
   [Anaconda](https://www.continuum.io/downloads)
 
 * Librarie:    
   [scikit-learn](http://scikit-learn.org/stable/install.html)  
   [keras](https://keras.io/#installation)  
-  
+ 
+
 ###【备菜】Preparing the data：
  
 I wrote a module [__get](https://github.com/LoewiLu/NLP/blob/master/LSTM/feature_extraction.py) the data I need:
@@ -52,6 +57,7 @@ data_test = fetch_20newsgroups(subset='test')
 
 
 ###【切菜】Extracting features:
+
 Convert the text into numerical feature vectors.
 
 #### <a name="WE"> -- Word Embedding (mainly for Keras): </a>
@@ -137,7 +143,7 @@ print('Model completed ：）')
 
 * Sklearn: 
 
-This time we just implement following [classifiers](https://github.com/LoewiLu/NLP/tree/master/cross_validation have different parameters) :
+This time we just implement following [classifiers](https://github.com/LoewiLu/NLP/tree/master/cross_validation) :
 
 ~~~python
 from sklearn.naive_bayes import MultinomialNB
@@ -180,7 +186,7 @@ clf = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1, cv = cv)
 clf.fit(X_train, y_train)
 ~~~
 
-[Different models](https://github.com/LoewiLu/NLP/tree/master/cross_validation have different parameters) have different parameters, just getting familiar with them...
+[Different models](https://github.com/LoewiLu/NLP/tree/master/cross_validation) have different parametershave different parameters, just getting familiar with them...
 
 ~~~python
 clf.best_score_
@@ -203,8 +209,6 @@ score = metrics.accuracy_score(y_test, pred)
 ~~~
 
 ------------------  
-------------------
-------------------
 ------------------
 
 ##WORD CLOUD 词云图
