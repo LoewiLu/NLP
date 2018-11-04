@@ -23,7 +23,7 @@ And we are using the second one: [20news-bydate.tar.gz](http://qwone.com/~jason/
 * 平台:    
   [Anaconda](https://www.continuum.io/downloads)
 
-* Librarie:    
+* Libraries:    
   [scikit-learn](http://scikit-learn.org/stable/install.html)  
   [keras](https://keras.io/#installation)  
  
@@ -186,7 +186,7 @@ clf = GridSearchCV(pipeline, parameters, n_jobs=-1, verbose=1, cv = cv)
 clf.fit(X_train, y_train)
 ~~~
 
-[Different models](https://github.com/LoewiLu/NLP/tree/master/cross_validation) have different parametershave different parameters, just getting familiar with them...
+[Different models](https://github.com/LoewiLu/NLP/tree/master/cross_validation) have different parameters, just getting familiar with them...
 
 ~~~python
 clf.best_score_
